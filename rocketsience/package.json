@@ -1,0 +1,11 @@
+{
+  "name": "rocketsience",
+  "version": "1.0.0",
+  "description": "The first very own npm package. Feeling Good 😁",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Ott",
+  "license": "ISC"
+}
