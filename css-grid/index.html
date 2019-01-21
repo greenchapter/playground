@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Grid Experiment</title>
+
+<style>
+	body {
+		display: grid;
+		grid: auto-flow dense / repeat(2, 50%);
+		place-items: center;
+	}
+
+	:nth-child(4n - 1) {
+		grid-column: 2;
+	}
+</style>
+
+<img alt="Image" src="image.png">
+<p> Lorem ipsum dolor sit amet…</p>
+
+<img alt="Image" src="image.png">
+<p> Lorem ipsum dolor sit amet…</p>
+
+<img alt="Image" src="image.png">
+<p> Lorem ipsum dolor sit amet…</p>
+
+<img alt="Image" src="image.png">
+<p> Lorem ipsum dolor sit amet…</p>
