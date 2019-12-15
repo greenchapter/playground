@@ -1,5 +1,8 @@
 .DS_Store
-node_modules/
 .env
 .swp
 .tmp
+.cache
+
+dist
+node_modules
