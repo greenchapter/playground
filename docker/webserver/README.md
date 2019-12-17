@@ -9,3 +9,7 @@
 `docker pull greenchapter/webserver:latest`
 
 `docker run --name website -d -p 80:80 greenchapter/webserver`
+
+
+Create your own image
+`docker build -t my-nginx-image .`
