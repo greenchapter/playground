@@ -8,3 +8,5 @@ attach to docker conteiner logs
 `docker save <image name> > <archive name>.tar`
 
 `docker load --input <archive name>.tar`
+
+`docker exec -it <container id> /bin/bash`
