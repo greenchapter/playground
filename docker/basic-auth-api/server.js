@@ -73,4 +73,5 @@ routes.get("/user", function(req, res) {
 
 app.use("/api", routes);
 app.listen(port);
+
 console.log("✨ Now the magic happens.");
