@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prepare": "docker build -t greenchapter/angular-app .",
-    "publish": "docker push greenchapter/angular-app:latest"
+    "build": "docker build -t greenchapter/angular-app .",
+    "push": "docker push greenchapter/angular-app:latest"
   },
 
   "private": true,
