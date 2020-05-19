@@ -1,0 +1,14 @@
+version: "3"
+services:
+  database:
+    image: greenchapter/database
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    restart: on-failure
+    volumes:
+     - ${PWD}/data:/var/lib/mysql
