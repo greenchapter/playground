@@ -3,6 +3,10 @@
 🐍Howto activate python virtual environment
 
 
+
+https://docs.python.org/3/tutorial/venv.html
+
+
 python3 -m venv data-science
 
 
