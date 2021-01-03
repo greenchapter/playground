@@ -140,4 +140,4 @@ for i in range(0, len(Y_test_e)):
 
 rmsle = math.sqrt(log_sq_sum/len(Y_test))
 
-print(rmsle)
+print(log_sq_sum)
