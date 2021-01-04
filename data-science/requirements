@@ -1,0 +1,24 @@
+# TensorFlow Libraries
+tensorflow
+tensorflow-datasets
+tensorflow-addons
+
+# Other Libraries
+scikit-learn
+scipy
+scikit-image
+numpy
+matplotlib
+pandas
+opencv-python
+pygame
+gym
+pyqt5
+
+# Linting/Tooling
+pylint
+flake8
+mypy
+isort
+autopep8
+pre-commit
