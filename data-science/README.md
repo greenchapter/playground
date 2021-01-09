@@ -1,5 +1,9 @@
 # Data Sience
 
+
+`brew install python@3.8`
+`brew link python@3.8`
+
 🐍Howto activate python virtual environment
 
 

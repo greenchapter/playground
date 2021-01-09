@@ -18,6 +18,8 @@ svc.fit(x_train, y_train)
 Y_predict = svc.predict(x_test)
 cm_rbf01 = confusion_matrix(y_test, Y_predict)
 
+print(cm_rbf01)
+
 svc = SVC(kernel='rbf', gamma=10.0)
 svc.fit(x_train, y_train)
 Y_predict = svc.predict(x_test)
