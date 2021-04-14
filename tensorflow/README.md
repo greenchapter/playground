@@ -12,6 +12,7 @@
 
 
 `pip install --upgrade tensorflow`
+`pip install --upgrade matplotlib`
 
 `python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"`
 
