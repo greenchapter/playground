@@ -4,14 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "docker build -t greenchapter/angular-app .",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build": "docker build -t greenchapter/angular-app .",
     "push": "docker push greenchapter/angular-app:latest"
   },
-
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.14",
