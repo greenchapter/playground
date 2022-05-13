@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WASM Importtest</title>
+    <script src="utils.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello, World.</h1>
+      I think your are <span id="age"></span> years old.
+    </div>
+
+    <script>
+      //   fetchAndInstantiate("hello.wasm").then(function (instance) {
+      //     var ho = instance.exports.how_old(2021, 1920);
+      //     var ageEl = document.getElementById("age");
+      //     ageEl.innerText = ho;
+      //   });
+    </script>
+
+    <script>
+      var importObject = {
+        imports: {
+          log_func: function (arg) {
+            console.log("You are this old: " + arg + " years.");
+          },
+        },
+      };
+      fetchAndInstantiate("hellolog.wasm", importObject).then(function (
+        instance
+      ) {
+        // console.log(instance.exports.log_how_old(2021, 1980));
+        instance.exports.log_how_old(2021, 1980);
+      });
+
+      WebAssembly.compileStreaming(fetch("hellolog.wasm")).then(function (mod) {
+        var imports = WebAssembly.Module.imports(mod);
+        console.log(imports[0]);
+        var exports = WebAssembly.Module.exports(mod);
+        console.log(exports);
+      });
+
+      var importObject2 = {
+        imports: { imported_func: (arg) => console.log(arg) },
+      };
+
+      WebAssembly.instantiateStreaming(fetch("hello.wasm"), importObject2).then(
+        (obj) => obj.instance.exports.how_old(2021, 1980)
+      );
+
+      (async () => {
+        const fetchPromise = fetch("hellolog.wasm");
+        const { instance } = await WebAssembly.instantiateStreaming(
+          fetchPromise, importObject
+        ); // Use the module
+
+        instance.exports.log_how_old(2021, 1298);
+        const result = instance.exports.how_old(2021, 1298);
+
+        console.log(result);
+        console.log(instance);
+      })();
+
+    </script>
+  </body>
+</html>
